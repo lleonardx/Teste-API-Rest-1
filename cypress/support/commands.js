@@ -23,3 +23,39 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// -- Este será o novo comando Cypress para fazer login e obter token de autorização --
+Cypress.Commands.add('loginAndGetToken', (email, senha) => {
+    cy.request({
+        method: 'POST', 
+        url: 'login',
+        body: {
+            "email": email,
+            "password": senha
+        }
+    }).then((response) => {
+        // Validando a resposta
+        expect(response.status).to.equal(200);
+        expect(response.body).to.have.property('authorization');
+
+        // Retornando o token de autorização para uso em outros testes
+        return response.body.authorization;
+    });
+})
+Cypress.Commands.add('cadastrarProduto' , (token, produto, preco, descricao, quantidade) =>{
+    cy.request({
+        method: 'POST',
+        url: 'produtos',
+        headers: { authorization: token },
+        body: {
+            "nome": produto,
+            "preco": 370,
+            "descricao": descricao, // A descrição e o nome do produto devem ser iguais para este teste
+            "quantidade": quantidade
+        },
+        failOnStatusCode: false 
+})
+
+})
+
+
+
