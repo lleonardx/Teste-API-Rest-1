@@ -1,4 +1,4 @@
-# Testes automatizado de API com Cypress ✨
+# Testes automatizado de API REST com Cypress ✨
 
 Este repositório contém testes automatizados de API utilizando o framework Cypress. Os testes incluem cenários de login de usuário, cadastro de produto, listagem, edição e exclusão de produtos.
 
