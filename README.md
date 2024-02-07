@@ -4,7 +4,7 @@ Este repositório contém testes automatizados de API utilizando o framework Cyp
 
 ## Funcionalidades Testadas 🚀
 
-- **Login de Usuário**: Testa o login com credenciais válidas e inválidas.
+- **Login de Usuário**: Testa o login com credenciais válidas.
 - **Cadastro de Produto**: Testa o cadastro de novos produtos com diferentes cenários.
 - **Listagem de Produtos**: Verifica se a listagem de produtos está funcionando corretamente.
 - **Edição de Produtos**: Testa a funcionalidade de edição de produtos.
