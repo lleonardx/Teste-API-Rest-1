@@ -1,25 +1,20 @@
-/// <reference types ="cypress" />
+/// <reference types="cypress" />
 
-describe('Login - Testes da API ServeRest', () => {
+describe('Login', () => {
 
-    it('Deve fazer login com Sucesso', () => {
+    it('Deve fazer login com sucesso', () => {
         cy.request({
-            method: 'POST', 
-            url:'login',
+            method: 'POST',
+            url: 'login',
             body: {
                 "email": "fulano@qa.com",
-                "password": "teste"
-              }
-        }).then((response) => {  //Validando a resposta
-            return response.body.authorization
-
-            cy.log(response.body.authorization)
+                "password": "teste" 
+            }
+        }).then((response) => {
             expect(response.status).to.equal(200)
             expect(response.body.message).to.equal('Login realizado com sucesso')
-           
-                
-
+            cy.log(response.body.authorization)
         })
     });
-    
+
 });
