@@ -2,6 +2,11 @@
 
 Este repositório contém testes automatizados de API utilizando o framework Cypress. Os testes incluem cenários de login de usuário, cadastro de produto, listagem, edição e exclusão de produtos.
 
+## Vídeo de Demonstração
+
+Assista ao vídeo de demonstração da automação em ação 🍿:
+[Assista ao vídeo](https://lnkd.in/dNCYvmrq)
+
 ## Funcionalidades Testadas 🚀
 
 - **Login de Usuário**: Testa o login com credenciais válidas.
